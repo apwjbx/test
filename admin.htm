@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>صفحة الإدارة</title>
+</head>
+<body>
+    <h1>نتائج الاستجواب</h1>
+    <div id="results">
+        <!-- سيتم عرض البيانات هنا -->
+    </div>
+
+    <script>
+        // استرجاع البيانات من Local Storage
+        let responses = JSON.parse(localStorage.getItem('responses') || '[]');
+
+        // التحقق من وجود البيانات
+        if (responses.length > 0) {
+            let resultsDiv = document.getElementById('results');
+            responses.forEach(response => {
+                let result = document.createElement('div');
+                result.innerHTML = `
+                    <p>الاسم: ${response.name}</p>
+                    <p>البريد الإلكتروني: ${response.email}</p>
+                    <p>العمر: ${response.age}</p>
+                    <hr>
+                `;
+                resultsDiv.appendChild(result);
+            });
+        } else {
+            document.getElementById('results').innerHTML = `
+                <p>لا توجد بيانات لعرضها. الرجاء التأكد من أنك قد ملأت النموذج وقمت بإرساله.</p>
+            `;
+        }
+    </script>
+</body>
+</html>
