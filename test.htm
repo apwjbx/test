@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>YOU HAVE BEEN HACKED</title>
+    <link rel="stylesheet" href="bundle.css" />
+    <script src="index.js" defer></script>
+     <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        img {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Function to open the image after 7 seconds
+        function openImageAfterDelay() {
+            // Wait for 7 seconds
+            setTimeout(function() {
+                window.location.href = 'ra.png';
+            }, 7000); // 7000 milliseconds = 7 seconds
+        }
+
+        // Call the function when the document is fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            openImageAfterDelay();
+        });
+    </script>
+</body>
+</html>

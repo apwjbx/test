@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows XP Error Message</title>
+   <style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #c0c0c0;
+        font-family: Tahoma, Geneva, sans-serif;
+    }
+    .error-box {
+        width: 360px;
+        border: 2px solid #000;
+        background-color: #fff;
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    }
+    .error-title {
+        background-color: #000080;
+        color: #fff;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .error-title span {
+        font-weight: bold;
+    }
+    .error-title .close {
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .error-content {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        color: #000 !important; /* Ensure text color is black */
+    }
+    .error-content img {
+        margin-right: 15px;
+    }
+    .error-buttons {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+    .error-buttons button {
+        padding: 5px 20px;
+        margin: 0 5px;
+        border: 1px solid #000;
+        background-color: #e0e0e0;
+        cursor: pointer;
+        font-size: 12px;
+    }
+    .error-buttons button:hover {
+        background-color: #d0d0d0;
+    }
+</style>
+
+</head>
+<body>
+    <div class="error-box">
+        <div class="error-title">
+            <span>Error</span>
+            <span class="close" onclick="window.close()">X</span>
+        </div>
+        <div class="error-content">
+            <img src="data:image/png;base64,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" alt="Error Icon" width="40" height="40">
+            <p>you have·d by winxp!</p>
+        </div>
+        <div class="error-buttons">
+            <div class="btn"><button onclick="window.open('store 3.htm', '_blank')">«·’›ÕÂ «· «·ÌÂ</button></div>
+        </div>
+    </div>
+</body>
+</html>

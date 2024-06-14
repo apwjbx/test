@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <title>Windows XP Desktop</title>
+    <link rel="stylesheet" type="text/css" href="assets/index.css">
+    <link rel="stylesheet" type="text/css" href="assets/desktop.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #c0c0c0;
+            font-family: Tahoma, Geneva, sans-serif;
+        }
+        .error-message {
+            width: 360px;
+            border: 2px solid #000;
+            background-color: #fff;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            z-index: 9999; /* Ensure it appears on top of other elements */
+        }
+        .error-title {
+            background-color: #000080;
+            color: #fff;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .error-title span {
+            font-weight: bold;
+        }
+        .error-title .close {
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .error-content {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            color: #000;
+            background-color: #fff; /* Ensure background color is white */
+        }
+        .error-content img {
+            margin-right: 15px;
+        }
+        .error-buttons {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        .error-buttons button {
+            padding: 5px 20px;
+            margin: 0 5px;
+            border: 1px solid #000;
+            background-color: #e0e0e0;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .error-buttons button:hover {
+            background-color: #d0d0d0;
+        }
+    </style>
+</head>
+<body>
+    <div class="desktop">
+        <!-- Existing icons -->
+        <div class="icon faisal-akhtar">
+            <img src="assets/documents.png">
+            <div class="icon-name">user data</div>
+        </div>
+        <div class="icon my-computer">
+            <img src="assets/computer.png">
+            <div class="icon-name">My Computer</div>
+        </div>
+        <div class="icon my-network">
+            <img src="assets/network.png">
+            <div class="icon-name">My Network</div>
+        </div>
+        <div class="icon note-pad">
+            <img src="assets/notepad.png">
+            <div class="icon-name">ReadME.txt</div>
+        </div>
+        <div class="icon recycle-bin">
+            <img src="assets/recycle.png">
+            <div class="icon-name">Recycle Bin</div>
+        </div>
+        <!-- New app icon -->
+        <div class="icon new-app">
+            <img src="assets/Njrat_0.7d_logo.png">
+            <div class="icon-name">Njrat</div>
+        </div>
+    </div>
+
+    <div class="window">
+        <div class="title-bar">
+            <div><img src="assets/notepad.png"> ReadME.txt</div>
+            <div class="controls">
+                <button class="cls"></button>
+                <button class="max"></button>
+                <button class="min"></button>
+            </div>
+        </div>
+        <div class="menu-bar">
+            <span>File</span>
+            <span>Edit</span>
+            <span>Format</span>
+            <span>View</span>
+            <span>Help</span>
+        </div>
+        <textarea></textarea>
+    </div>
+
+    <!-- Error message -->
+    <div class="error-message" id="error-message">
+        <div class="error-title">
+            <span>Error</span>
+            <span class="close" onclick="document.getElementById('error-message').style.display = 'none';">X</span>
+        </div>
+        <div class="error-content">
+            <img src="https://cdn.discordapp.com/attachments/1249381105316925554/1250841966757941308/Njrat_0.7d_logo.png?ex=666d119c&is=666bc01c&hm=468b4a025ad6130730b3d97da15c2acbac9b7179ad4962eb3b9482f29675b3de&" alt="Error Icon" width="40" height="40">
+            <p>You have been hacked by winxp!</p>
+        </div>
+        <div class="error-buttons">
+            <button class="btn" onclick="openTest()">ok</button>
+        </div>
+    </div>
+
+    <div class="taskbar">
+        <div class="start-button"><img src="assets/logo.svg"> start</div>
+
+        <div class="opened-tabs">
+            <!-- Existing tabs -->
+            <div class="open-tab" onclick="window.open('c://')"><img src="assets/documents.png"> userdat</div>
+            <div class="open-tab" onclick="window.open('c://')"><img src="assets/computer.png"> My Computer</div>
+            <div class="open-tab" onclick="window.open('https://twitter.com/faisallakhtarr/')"><img src="assets/network.png"> My Network</div>
+            <div class="open-tab readme active"><img src="assets/notepad.png"> ReadME.txt</div>
+        </div>
+
+        <div class="time">11:20 PM</div>
+    </div>
+
+    <script src="assets/desktop.js"></script>
+</body>
+</html>
